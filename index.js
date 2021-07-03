@@ -80,7 +80,7 @@ req.onload = function fun(){
             tbody.append(tr);
         }
     }
-    table.append(b);
+    container.append(b);
     var c=document.createElement("button")
     c.innerHTML="Last"
     c.onclick=function(){
@@ -98,19 +98,21 @@ req.onload = function fun(){
             tbody.append(tr);
         }
     }
-    table.append(c)
+    container.append(c)
 
 var arry=[];
 for(var i=1;i<10;i++){
     var a = document.createElement('button');
     a.innerHTML=i+1;
     //arry.push(button);
-    table.append(a);
+    container.append(a);
     arry.push(a);
 }
 
 arry.forEach(ele=>{ 
    ele.onclick=function(){
+
+   
     pagination(ele.innerHTML);
    }
    }) 
